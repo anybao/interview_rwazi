@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\NoteController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,6 +14,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+//Route::get('/', function () {
+//    return view('note');
+//});
+
+Route::get('', [NoteController::class, 'index']);
+Route::post('/', [NoteController::class, 'store']);
+Route::get('/search', [NoteController::class, 'search']);
+Route::delete('/{note}', [NoteController::class, 'destroy']);
