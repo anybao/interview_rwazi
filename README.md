@@ -20,3 +20,14 @@ randomly generated.
 track of when they made each note.
 - Please ensure that you use Laravel and Blade components when building the
 application.
+
+---
+### Credits
+**Author**: Harry Tran (tranquanghuy1093@gmail.com)
+
+**Demo**: [https://interview-rwazi-2a1295b7ad60.herokuapp.com/](https://interview-rwazi-2a1295b7ad60.herokuapp.com/)
+
+Tech stacks:
+- PHP 8.1
+- Laravel v10.23.1
+- Design Pattern: Repository Design Pattern
