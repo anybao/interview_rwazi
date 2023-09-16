@@ -1,6 +1,8 @@
 @include('layout.header')
 
 <div class="page-content container note-has-grid">
+    <p class="text-muted small">Author: Harry Tran (tranquanghuy1093@gmail.com)</p>
+
     @include('layout.nav')
     @include('widget.search')
     @include('widget.error')
