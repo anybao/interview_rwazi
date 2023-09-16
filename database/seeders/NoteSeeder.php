@@ -12,6 +12,8 @@ class NoteSeeder extends Seeder
      */
     public function run(): void
     {
-        Note::factory(25)->create();
+        if (!app()->runningUnitTests()) {
+            Note::factory(25)->create();
+        }
     }
 }
