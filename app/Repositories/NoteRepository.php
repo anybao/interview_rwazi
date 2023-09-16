@@ -6,17 +6,21 @@ use App\Models\Note;
 use Illuminate\Contracts\Pagination\LengthAwarePaginator;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Arr;
 
 class NoteRepository
 {
     /**
      * Return list of note paginated
      *
+     * @param array $params
      * @return LengthAwarePaginator
      */
-    public function paginate(): LengthAwarePaginator
+    public function paginate(array $params): LengthAwarePaginator
     {
-        return Note::query()->latest()->paginate();
+        $orderByDate = Arr::get($params, 'orderByDate', 'desc');
+
+        return Note::query()->orderBy('created_at', $orderByDate)->paginate();
     }
 
     /**

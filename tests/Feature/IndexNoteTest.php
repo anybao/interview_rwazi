@@ -27,6 +27,22 @@ class IndexNoteTest extends TestCase
         $response->assertSeeTextInOrder($notes);
     }
 
+    public function test_should_see_the_result_order_by_oldest_date_when_there_is_created_notes_and_sorted()
+    {
+        Note::factory()->count(10)->create();
+        $notes = Note::query()->orderBy('created_at', 'asc')->pluck('content')->toArray();
+        $response = $this->get(self::ENDPOINT.'?orderByDate=asc');
+        $response->assertSeeTextInOrder($notes);
+    }
+
+    public function test_should_see_error_when_orderByDate_is_invalid()
+    {
+        $this->followingRedirects();
+        Note::factory()->count(10)->create();
+        $response = $this->get(self::ENDPOINT.'?orderByDate=invalid');
+        $response->assertSee('The selected order by date is invalid.');
+    }
+
     public function test_should_see_pagination_when_number_of_created_notes_is_huge()
     {
         Note::factory()->count(50)->create();

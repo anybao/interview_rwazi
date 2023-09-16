@@ -18,7 +18,7 @@ use Illuminate\Support\Facades\Route;
 //    return view('note');
 //});
 
-Route::get('', [NoteController::class, 'index']);
-Route::post('/', [NoteController::class, 'store']);
-Route::get('/search', [NoteController::class, 'search']);
-Route::delete('/{note}', [NoteController::class, 'destroy']);
+Route::get('', [NoteController::class, 'index'])->name('index');
+Route::post('/', [NoteController::class, 'store'])->name('create');
+Route::get('/search', [NoteController::class, 'search'])->name('search');
+Route::delete('/{note}', [NoteController::class, 'destroy'])->name('remove');

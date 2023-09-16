@@ -7,10 +7,16 @@
         <div class="collapse navbar-collapse" id="navbarScroll">
             <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="/">Home</a>
+                    <a class="nav-link active" aria-current="page" href="/"><i class="fa fa-home"></i> Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" aria-current="page" href="https://github.com/anybao/interview_rwazi" target="_blank">Github</a>
+                    <a class="nav-link" aria-current="page" href="{{  route('index').'?orderByDate=desc' }}">Sort (latest)</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="{{  route('index').'?orderByDate=asc' }}">Sort (oldest)</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="https://github.com/anybao/interview_rwazi" target="_blank"><i class="fa fa-github"></i> Github</a>
                 </li>
             </ul>
             <div class="d-flex">

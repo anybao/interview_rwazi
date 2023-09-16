@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\CreateNoteRequest;
+use App\Http\Requests\IndexNoteRequest;
 use App\Http\Requests\SearchNoteRequest;
 use App\Models\Note;
 use App\Repositories\NoteRepository;
@@ -24,9 +25,9 @@ class NoteController extends Controller
      *
      * @return \Illuminate\Contracts\Foundation\Application|Factory|View|Application
      */
-    public function index(): Application|View|Factory|\Illuminate\Contracts\Foundation\Application
+    public function index(IndexNoteRequest $request): Application|View|Factory|\Illuminate\Contracts\Foundation\Application
     {
-        $notes = $this->noteRepository->paginate();
+        $notes = $this->noteRepository->paginate($request->all());
         return view('notes', compact('notes'));
     }
 
