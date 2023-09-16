@@ -10,7 +10,7 @@
         <div id="note-full-container" class="note-has-grid row">
             @if(count($notes) > 0)
             @foreach($notes as $note)
-                @include('widget.view', $note)
+                <x-note :note="$note"></x-note>
             @endforeach
             @else
                 <p>There are no results.</p>
