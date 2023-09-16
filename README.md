@@ -25,7 +25,7 @@ application.
 ### Credits
 **Author**: Harry Tran (tranquanghuy1093@gmail.com)
 
-**Demo**: [https://interview-rwazi-2a1295b7ad60.herokuapp.com/](https://interview-rwazi-2a1295b7ad60.herokuapp.com/)
+**Demo**: [http://interview-rwazi-2a1295b7ad60.herokuapp.com/](http://interview-rwazi-2a1295b7ad60.herokuapp.com/)
 
 Tech stacks:
 - PHP 8.1
