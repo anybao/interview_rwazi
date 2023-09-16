@@ -9,9 +9,9 @@
     <div class="tab-content bg-transparent">
         <div id="note-full-container" class="note-has-grid row">
             @if(count($notes) > 0)
-            @foreach($notes as $note)
-                <x-note :note="$note"></x-note>
-            @endforeach
+                @foreach($notes as $note)
+                    <x-note :note="$note"></x-note>
+                @endforeach
             @else
                 <p>There are no results.</p>
             @endif
