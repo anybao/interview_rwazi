@@ -15,7 +15,7 @@
             @else
                 <p>There are no results.</p>
             @endif
-            {{ $notes->links() }}
+            {{ $notes->withQueryString()->links() }}
         </div>
     </div>
 </div>
