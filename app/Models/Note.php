@@ -11,7 +11,10 @@ class Note extends Model
 
     protected $fillable = ['content', 'background'];
 
-    public static function boot()
+    /**
+     * @return void
+     */
+    public static function boot(): void
     {
         parent::boot();
 
